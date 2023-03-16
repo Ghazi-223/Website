@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Eat Move Sleep</title>
+</head>
+<style>
+    body {
+        background-image: url('library.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        /* overflow: auto; */
+    }
+
+    .logo {
+        /* border: 2px solid red; */
+        display: inline-block;
+        color: white;
+        /* padding-bottom: 10px; */
+    }
+
+    .mid {
+        /* border: 2px solid green; */
+        display: inline-block;
+        position: absolute;
+        right: 500px;
+        padding: 20px;
+    }
+
+    .nav {
+        float: left;
+        list-style: none;
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    div ul li {
+        /* background-color: aqua;
+        height: 40px;
+        width: 70px; */
+        padding: 5px;
+        position: relative;
+        left: 30px;
+    }
+
+    .logo:hover {
+        filter: brightness(200%);
+    }
+
+    div ul li a {
+        text-decoration: none;
+        color: gray;
+        /* background-color: aqua; */
+    }
+
+    div ul li a:hover {
+        /* text-decoration: none; */
+        text-decoration: underline;
+        color: white;
+    }
+
+    .right {
+        /* border: 2px solid yellow; */
+        position: absolute;
+        display: inline-block;
+        top: 30px;
+        right: 20px;
+    }
+
+    .sign {
+        margin: 10px;
+        /* margin: 2px 2px; */
+        padding: 8px;
+        background: none;
+        color: gray;
+        border: black;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+    }
+
+    .sign:hover {
+        text-decoration: underline;
+        color: white;
+        border-radius: 8px;
+    }
+
+    #text {
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* overflow: auto;
+        position: absolute; */
+    }
+
+    .box {
+        /* border: 2px solid red; */
+        margin-top: 150px;
+        display: flex;
+        /* border: 2px solid white; */
+    }
+
+    p {
+        color: white;
+        font-size: 50px;
+    }
+
+    .text {
+        margin-left: 130px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .search {
+        margin-left: 40px;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 480px;
+        background-color: black;
+        opacity: 0.8;
+        color: white;
+        font-size: 20px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 100px;
+        border-radius: 10px;
+        box-shadow: 8px 8px 10px rgb(0, 0, 0);
+    }
+
+    .search:hover {
+        border: 2px solid rgb(163, 163, 242);
+    }
+
+    .searchbutton {
+        background: none;
+        opacity: 0.8;
+        border: NONE;
+        height: 30px;
+        position: relative;
+        top: 2px;
+        right: 100px;
+        font-size: 25px;
+        color: white;
+        border-left: 2px solid white;
+    }
+
+    .background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+    }
+
+    .searchbutton:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .about {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        opacity: 0.5;
+        top: 230px;
+        background-color: rgb(61, 60, 60);
+        border-color: rgb(61, 60, 60);
+        text-align: center;
+    }
+
+    .abouthead {
+        padding: 20px;
+        opacity: 1;
+        color: white;
+    }
+
+    .abouttext {
+        opacity: 1;
+        font-size: 20px;
+        padding: 0px 30px;
+        padding-bottom: 10px;
+    }
+
+    .logoname {
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .bookcover {
+        margin-left: 8%;
+    }
+
+    .description {
+        margin-left: 3%;
+        padding-right: 2%;
+    }
+
+    .heading {
+        font-size: 50px;
+        color: white;
+    }
+
+    .authorname {
+        font-size: 20px;
+        position: relative;
+        bottom: 40px;
+        display: inline;
+        /* left: 350px; */
+    }
+
+    .synopsis {
+        font-size: 24px;
+        color: white;
+        /* border: 2px solid white; */
+    }
+
+    .but {
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* margin: auto; */
+    }
+
+    button {
+        font-size: 20px;
+        background: black;
+        border-radius: 10px;
+        border: black;
+        color: white;
+        height: 50px;
+        width: 200px;
+    }
+
+    button:hover{
+        /* text-decoration: underline; */
+        color: black;
+        border: white;
+        background: white;
+        cursor: pointer;
+    }
+
+    button:focus + .sum{
+        display: block;
+    }
+
+    .sum{
+        display: none;
+        padding: 50px 100px;
+        font-size: 20px;
+    }
+    .revis{
+        padding: 0px 100px;
+    }
+</style>
+
+<body>
+    <img src="library.jpg" alt="" class="background">
+    <div id="back"></div>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="" id="logoimage" width="200" height="100" style="filter: invert(90%);">
+            <!-- <span id="logoname">Smart Owl</span> -->
+        </div>
+        <div class="mid">
+            <ul id="navbar">
+                <li class="nav"><a href="home.html">Home</a></li>
+                <li class="nav" id="search"><a href="search.html">Search</a></li>
+                <li class="nav"><a href="Browse.html">Browse</a></li>
+                <li class="nav"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- <button class="sign">Sign Up</button>
+            <button class="sign">Sign In</button> -->
+            <a href="signup.html" class="sign">Sign Up</a>
+            <a href="signin.html" class="sign">Sign In</a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="bookcover">
+            <img src="book5.jpg" alt="As a Man Thinketh" height="380" width="220" style="border-radius: 10px;">
+        </div>
+        <div class="description">
+            <h2 class="heading">Eat Move Sleep</h2>
+            <!-- <span class="authorname">James Allen</span> -->
+            <p class="authorname"> by Tom Rath</p>
+            <br>
+            <b class="synopsis">Synopsis:</b>
+            <p class="synopsis">Eat, Move, Sleep shows you that living a long and healthy life is not the result of massive lifestyle changes, but of lots of small habits, which improve the way you sleep, eat and exercise and, if combined, add a whole lot to your health.</p>
+        </div>
+    </div>
+    <div class="but">
+        <button>Show summary</button>
+        <p class="sum">
+            If you’re like most people, you’ll not exercise for a while, then feel bad and start setting really ambitious goals, like going to the gym 5 times a week. Even if you’re one of those rare types, who can pull off these kinds of sudden habit changes, there’s still a chance it’s the wrong thing to do.
+
+Here’s why: If you sit for six hours a day, even working out for two hours afterwards won’t reverse the health damage you’ve done. The consequences are similar to those from smoking.
+
+Exercise isn’t about the total amount of sweat you produce each week, your body only cares about not being inactive for a long stretch of time. Ever. The National Institutes of Health looked at 240,000 peoples’ movement behavior, finding out sitting for most of your time increases your mortality rate by 50%.
+
+The solution is wonderfully simple: Don’t sit for longer than an hour. That’s it. Don’t pile 6-8 hours of sitting around on top of watching TV, eating your meals and sitting in the bus, train or your car (we do sit a lot, don’t we?). Walk to the house five blocks away, take the stairs, not the elevator and just get up a few times at work to move around.
+
+Note: Specifically for this purpose, I recently got a Garmin Vivosmart HR activity tracker, and I’m super grateful for it. If I sit for too long, it vibrates and tells me to move (should be a requirement for every writer).
+
+There are illegal drugs, like cocaine and heroin, legal (and socially accepted) drugs, like tobacco and alcohol and then, there’s sugar, which, according to Tom, is the worst one. Not only because it’s not even considered a drug, but because it’s part of everyone’s daily food intake.
+
+How much sugar do you think you eat each year? Remembering it is actually quite simple: it’s your own weight in pure, white, refined sugar. Imagine building a statue of yourself, purely made from sugar, and then eating that, one bite a day – every year.
+
+There are 3 reasons why added sugar is the devil in disguise:
+
+Eating it releases dopamine, which gives you a “high” feeling and makes it addictive.
+The more you eat, the more you want.
+You build a tolerance, meaning you have to eat more each time, in order to get that dopamine hit again.
+What should you do? Treat sugar like it’s an actual, illegal drug. Avoid added sugar wherever you can, don’t even buy unnecessary sweets and snacks and use it very carefully when cooking.
+
+There’s sleep and there’s efficient sleep. You know, one is physically being in bed, the other is actually getting some quality shut-eye during which you’re actually recovering.
+
+However, and most of my friends do this, you can ruin a perfectly good night of sleep with one tiny mistake in the morning: hitting the snooze button. The reason is that if you hit snooze and go back to sleep, your alarm wakes you up right at the point where you’re about to enter a deep sleep phase again – which makes you groggy and tired.
+
+The more you repeat this, the worse it gets, so even if you’ve just slept 7 hours before, getting up would’ve been better than snoozing for another 45 minutes.
+
+I never understood how someone would rather spend up to an hour in a constant state of semi-wakefulness, instead of just sleeping an hour longer in the first place, but it’s a habit deeply ingrained in lots of people.
+
+If you’re one of them, make this your mission for tomorrow: don’t hit the snooze button. Set your alarm at the latest, possible time, and force yourself to get up instantly.</p>
+    </div>
+    <div class="revis">
+        <h1 class="heading">Review :</h1>
+        <p class="synopsis">As A Man Thinketh is a very short book, with a very short summary. At first I thought it’s best to just get the book and read it in one go, but come to think of it, I’d use this summary as a guideline and look into it to get a better grip on things, as the language in the book can be quite complicated, simply because it’s so old. I have since read the book and can recommend that too in full, though. It’s still a short read and worth reading through at least once in your life.</p>
+    </div>
+    <div class="about">
+        <h1 class="abouthead">About us</h1>
+        <p class="abouttext">What a cool book. I love his approach of small, incremental changes. Even if you just make one small change each month, that’ll be 12 each year, and within four years, you’ll have accumulated almost 50 positive habits. This stuff compounds big time, so never underestimate the power of marginal gains.
+
+            Short set of blinks on a wide range of topics and with lots of examples, I’d read those first and then dive into Eat, Move, Sleep once you’ve made a few changes</p>
+    </div>
+</body>
+
+</html>

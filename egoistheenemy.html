@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Ego is the Enemy</title>
+</head>
+<style>
+    body {
+        background-image: url('library.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        /* overflow: auto; */
+    }
+
+    .logo {
+        /* border: 2px solid red; */
+        display: inline-block;
+        color: white;
+        /* padding-bottom: 10px; */
+    }
+
+    .mid {
+        /* border: 2px solid green; */
+        display: inline-block;
+        position: absolute;
+        right: 500px;
+        padding: 20px;
+    }
+
+    .nav {
+        float: left;
+        list-style: none;
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    div ul li {
+        /* background-color: aqua;
+        height: 40px;
+        width: 70px; */
+        padding: 5px;
+        position: relative;
+        left: 30px;
+    }
+
+    .logo:hover {
+        filter: brightness(200%);
+    }
+
+    div ul li a {
+        text-decoration: none;
+        color: gray;
+        /* background-color: aqua; */
+    }
+
+    div ul li a:hover {
+        /* text-decoration: none; */
+        text-decoration: underline;
+        color: white;
+    }
+
+    .right {
+        /* border: 2px solid yellow; */
+        position: absolute;
+        display: inline-block;
+        top: 30px;
+        right: 20px;
+    }
+
+    .sign {
+        margin: 10px;
+        /* margin: 2px 2px; */
+        padding: 8px;
+        background: none;
+        color: gray;
+        border: black;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+    }
+
+    .sign:hover {
+        text-decoration: underline;
+        color: white;
+        border-radius: 8px;
+    }
+
+    #text {
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* overflow: auto;
+        position: absolute; */
+    }
+
+    .box {
+        /* border: 2px solid red; */
+        margin-top: 150px;
+        display: flex;
+        /* border: 2px solid white; */
+    }
+
+    p {
+        color: white;
+        font-size: 50px;
+    }
+
+    .text {
+        margin-left: 130px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .search {
+        margin-left: 40px;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 480px;
+        background-color: black;
+        opacity: 0.8;
+        color: white;
+        font-size: 20px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 100px;
+        border-radius: 10px;
+        box-shadow: 8px 8px 10px rgb(0, 0, 0);
+    }
+
+    .search:hover {
+        border: 2px solid rgb(163, 163, 242);
+    }
+
+    .searchbutton {
+        background: none;
+        opacity: 0.8;
+        border: NONE;
+        height: 30px;
+        position: relative;
+        top: 2px;
+        right: 100px;
+        font-size: 25px;
+        color: white;
+        border-left: 2px solid white;
+    }
+
+    .background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+    }
+
+    .searchbutton:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .about {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        opacity: 0.5;
+        top: 230px;
+        background-color: rgb(61, 60, 60);
+        border-color: rgb(61, 60, 60);
+        text-align: center;
+    }
+
+    .abouthead {
+        padding: 20px;
+        opacity: 1;
+        color: white;
+    }
+
+    .abouttext {
+        opacity: 1;
+        font-size: 20px;
+        padding: 0px 30px;
+        padding-bottom: 10px;
+    }
+
+    .logoname {
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .bookcover {
+        margin-left: 8%;
+    }
+
+    .description {
+        margin-left: 3%;
+        padding-right: 2%;
+    }
+
+    .heading {
+        font-size: 50px;
+        color: white;
+    }
+
+    .authorname {
+        font-size: 20px;
+        position: relative;
+        bottom: 40px;
+        display: inline;
+        /* left: 350px; */
+    }
+
+    .synopsis {
+        font-size: 24px;
+        color: white;
+        /* border: 2px solid white; */
+    }
+
+    .but {
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* margin: auto; */
+    }
+
+    button {
+        font-size: 20px;
+        background: black;
+        border-radius: 10px;
+        border: black;
+        color: white;
+        height: 50px;
+        width: 200px;
+    }
+
+    button:hover{
+        /* text-decoration: underline; */
+        color: black;
+        border: white;
+        background: white;
+        cursor: pointer;
+    }
+
+    button:focus + .sum{
+        display: block;
+    }
+
+    .sum{
+        display: none;
+        padding: 50px 100px;
+        font-size: 20px;
+    }
+    .revis{
+        padding: 0px 100px;
+    }
+</style>
+
+<body>
+    <img src="library.jpg" alt="" class="background">
+    <div id="back"></div>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="" id="logoimage" width="200" height="100" style="filter: invert(90%);">
+            <!-- <span id="logoname">Smart Owl</span> -->
+        </div>
+        <div class="mid">
+            <ul id="navbar">
+                <li class="nav"><a href="home.html">Home</a></li>
+                <li class="nav" id="search"><a href="search.html">Search</a></li>
+                <li class="nav"><a href="Browse.html">Browse</a></li>
+                <li class="nav"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- <button class="sign">Sign Up</button>
+            <button class="sign">Sign In</button> -->
+            <a href="signup.html" class="sign">Sign Up</a>
+            <a href="signin.html" class="sign">Sign In</a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="bookcover">
+            <img src="book10.jpg" alt="As a Man Thinketh" height="380" width="220" style="border-radius: 10px;">
+        </div>
+        <div class="description">
+            <h2 class="heading">Ego is the enemy</h2>
+            <!-- <span class="authorname">James Allen</span> -->
+            <p class="authorname"> by Ryan Holiday</p>
+            <br>
+            <b class="synopsis">Synopsis:</b>
+            <p class="synopsis">Ego Is The Enemy reveals why a tendency that’s hardwired into our brains — the belief that the world revolves around us and us alone — keeps holding us back from living the very life it dreams up for us, including what we can do to overcome our ego, be kinder to others and ourselves, and achieve true greatness.</p>
+        </div>
+    </div>
+    <div class="but">
+        <button>Show summary</button>
+        <p class="sum">
+            How could we not start the summary of a book about stoicism with a quote from one of the all-time greats?
+
+“It is impossible for a man to learn that, which he thinks he already knows.” – Epictetus
+
+I’m proud of my attitudes and habits towards life. I’m disciplined, spend very little of the money I’m earning, live a frugal life – I just know I’m going to win in life thanks to these. However, that sometimes leaves me thinking: “There’s not much left I can learn here, I won’t change any of these for a long time.” Every time that thought crosses my mind, I call bullshit.
+
+It might be true that these basic principles won’t change much, but there’s a huge load of things for me left to learn when it comes to making money, writing, selling, relationships, other people. It’s a never-ending process.
+
+Ryan suggests you think of yourself like many of the ancient Stoics did: an eternal student of life, dedicated to learning as long as you live. This keeps you humble and encourages you to learn from the best in your field.
+
+However, it pays to look both up and down the chain: take some time to mentor and teach others. Going back to beginners and helping them exposes you to the full spectrum of skill levels and is another way to restrain your ego.
+
+Lesson 2: Delegate tasks to learn to trust in others.
+Have you ever held on to an incredibly dull task, just because you thought no one else can do it better than you? I do this all the time, especially for repetitive to-dos. This not just inflates your own ego, it’s also a huge missed opportunity to build trust with the people you work with.
+
+Trust increases the speed of everything in a business, the more employees trust one another, the faster things get done. Delegating some of your work to others forces you to do two things:
+
+Respect other people’s work.
+Trust that they can get a job done.
+These aren’t just ways to win against your ego, but can also be the difference between a thriving company and one that goes bust.
+
+For example, legendary American car manufacturer DeLorean may always be remembered for creating the car from Back To The Future, but due to its CEO’s stubborn attitude of having to check every single detail it went bankrupt after just seven years – with less than 10,000 cars sold.
+
+Your turn: Can you come up with another example of a company that went bankrupt due to a lack of trust? For example: ________________________
+Lesson 3: Use unexpected results as inflection points to keep improving.
+Our ego has the tendency to blow everything out of proportion, both good and bad. Sometimes we get results, which are a lot better than we expected. Other times they’re much worse. The ego ruins both of them.
+
+When you do a bad job, your ego will tell you it’s not your fault and blame anything and anyone but you. Do a great job, and it’ll say you deserve every single ounce of credit, giving you a lot more than you probably deserve. Instead of letting these get to your head one way or the other, you can use them as inflection points to keep improving.
+
+Have a high? Congratulate yourself, turn right back around and get back to work. Have a low? Take responsibility, learn something and start moving up again.
+
+For example, this Quora answer recently took off for me. I could have commended myself for being “such a great writer” and rested on my laurels all week. Instead, I took one look at the rest of my answers, saw how many got zero traction at all, ordered a bunch of Ryan Holiday books, so I could learn to write better, and then wrote some more.
+
+Take results only as what they truly are: a great opportunity to honestly reflect on your work. Nothing more, nothing less.</p>
+    </div>
+    <div class="revis">
+        <h1 class="heading">Review :</h1>
+        <p class="synopsis">Stoicism is one of the few things you can hardly be confronted with often enough in your life. Besides Ego Is The Enemy, The Obstacle Is The Way is another great read on the subject, also by Ryan Holiday. I can also recommend The Daily Stoic, a book that works like a daily inspirational calendar, with a Stoic quote and a short explanation for each. And if you want to get a rough overview of the high-level mission of the Stoics, check out this table.</p>
+    </div>
+    <div class="about">
+        <h1 class="abouthead">About us</h1>
+        <p class="abouttext">One thing I liked in particular as I was reading the blinks for How To Stop Worrying And Start Living is that Dale backed up every single one of his tactics with a specific example of someone who applied it to reduce their worry. That made them more actionable. I could’ve easily shared three more, so I highly recommend you check out the blinks to get the full pool of ideas. Simple, straightforward, and useful, thumbs up!</p>
+    </div>
+</body>
+
+</html>

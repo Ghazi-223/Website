@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&display=swap" rel="stylesheet">
+    <title>Browse</title>
+</head>
+<style>
+    body {
+        /* background-image: url('library.jpg');
+        background-size: 100%; */
+        /* background-repeat: no-repeat; */
+        margin: 0;
+        padding: 0;
+    }
+
+    .background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+        filter: brightness(50%);
+    }
+
+    .logo {
+        /* border: 2px solid red; */
+        display: inline-block;
+        color: white;
+        /* padding-bottom: 10px; */
+    }
+
+    .logo:hover {
+        filter: brightness(200%);
+    }
+
+    .header {
+        /* background-color: black; */
+        /* opacity: 0.7; */
+        height: 100px;
+    }
+
+    .mid {
+        /* border: 2px solid green; */
+        display: inline-block;
+        position: absolute;
+        right: 500px;
+        padding: 20px;
+    }
+
+    .nav {
+        float: left;
+        list-style: none;
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    div ul li {
+        /* background-color: aqua;
+        height: 40px;
+        width: 70px; */
+        padding: 5px;
+        position: relative;
+        left: 30px;
+    }
+
+    div ul li a {
+        text-decoration: none;
+        color: gray;
+        /* background-color: aqua; */
+    }
+
+    div ul li a:hover {
+        /* text-decoration: none; */
+        text-decoration: underline;
+        color: white;
+    }
+
+    .right {
+        /* border: 2px solid yellow; */
+        position: absolute;
+        display: inline-block;
+        top: 30px;
+        right: 20px;
+    }
+
+    .sign {
+        margin: 10px;
+        /* margin: 2px 2px; */
+        padding: 8px;
+        background: none;
+        color: gray;
+        border: black;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+    }
+
+    .sign:hover {
+        text-decoration: underline;
+        color: white;
+        border-radius: 8px;
+    }
+
+    #text {
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* overflow: auto;
+        position: absolute; */
+    }
+
+    .box {
+        /* border: 2px solid red; */
+        margin-top: 150px;
+        margin-left: 350px;
+    }
+
+    p {
+        color: white;
+        font-size: 50px;
+    }
+
+    .text {
+        margin-left: 130px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .search {
+        margin-left: 40px;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 480px;
+        background-color: black;
+        opacity: 0.8;
+        color: white;
+        font-size: 20px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 100px;
+        border-radius: 10px;
+        box-shadow: 8px 8px 10px rgb(0, 0, 0);
+    }
+
+    .search:hover {
+        border: 2px solid rgb(163, 163, 242);
+    }
+
+    .searchbutton {
+        background: none;
+        opacity: 0.8;
+        border: NONE;
+        height: 30px;
+        position: relative;
+        top: 2px;
+        right: 100px;
+        font-size: 25px;
+        color: white;
+        border-left: 2px solid white;
+    }
+
+    .searchbutton:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .about {
+        /* height: 100%;
+        width: 100%; */
+        position: relative;
+        opacity: 0.5;
+        top: 500px;
+        background-color: rgb(61, 60, 60);
+        border-color: rgb(61, 60, 60);
+        text-align: center;
+    }
+
+    .abouthead {
+        padding: 20px;
+        opacity: 1;
+        color: white;
+    }
+
+    .abouttext {
+        opacity: 1;
+        font-size: 20px;
+        padding: 0px 30px;
+        padding-bottom: 10px;
+    }
+
+    .logoname {
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    /* .bar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    } */
+
+    .container1 {
+        position: relative;
+        top: 150px;
+        display: flex;
+        /* /* align-items :center; */
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .books {
+        /* display: flex;
+        align-items: center; */
+        /* border: 3px solid red; */
+        height: 310px;
+        width: 190px;
+        background-color: black;
+        opacity: 0.7;
+        transition-property: all;
+        transition-duration: 0.6s;
+        border: 4px solid gray ;
+        border-radius: 10px;
+        /* margin: 40px; */
+    }
+
+    /* .books:hover{
+        height: 320px;
+        width: 200px;
+        opacity: 0.9;
+    } */
+
+    .books:hover {
+        height: 320px;
+        width: 200px;
+        opacity: 0.9;
+        border: 6px solid white;
+    }
+
+    .books:hover .bookcover {
+        height: 260px;
+        width: 200px;
+    }
+
+    .container2 {
+        position: relative;
+        top: 300px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .container3 {
+        position: relative;
+        top: 450px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* .bar{
+        background-color: black;
+        height: 1300px;
+        width: 80%;
+        margin: auto;
+        position: relative;
+        top: 50px;
+    } */
+    .welcome {
+        color: white;
+    }
+
+    .welcometext {
+        color: white;
+    }
+
+    .bookheading1 {
+        display: inline-block;
+        color: gray;
+        position: relative;
+        top: 150px;
+        left: 100px;
+    }
+
+    .bookheading2 {
+        display: inline-block;
+        color: gray;
+        position: relative;
+        top: 300px;
+        left: 100px;
+    }
+
+    .bookheading3 {
+        display: inline-block;
+        color: gray;
+        position: relative;
+        top: 450px;
+        left: 100px;
+    }
+
+    .bookcover {
+        height: 250px;
+        width: 190px;
+        transition-property: all;
+        transition-duration: 0.6s;
+    }
+
+    /* .bookcover:hover{
+        height: 260px;
+        width: 200px;
+    } */
+
+    .booktitle {
+        display: flex;
+        color: rgb(199, 197, 197);
+        font-size: 20px;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-top: 5px;
+        justify-content: center;
+        text-decoration: none;
+        transition-property: all;
+        transition-duration: 0.6s;
+    }
+
+    .booktitle:hover {
+        color: white;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <img src="background2.jpg" alt="" class="background">
+    <div id="back"></div>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="" id="logoimage" width="200" height="100" style="filter: invert(90%);">
+            <!-- <span id="logoname">Smart Owl</span> -->
+        </div>
+        <div class="mid">
+            <ul id="navbar">
+                <li class="nav"><a href="home.html">Home</a></li>
+                <li class="nav" id="search"><a href="search.html">Search</a></li>
+                <li class="nav"><a href="Browse.html">Browse</a></li>
+                <li class="nav"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- <button class="sign">Sign Up</button>
+            <button class="sign">Sign In</button> -->
+            <a href="signup.html" class="sign">Sign Up</a>
+            <a href="signin.html" class="sign">Sign In</a>
+        </div>
+    </div>
+    <!-- <div class="box">
+        <div class="text">
+            <p>Smart Owl Library</p>
+        </div>
+        <div>
+            <input type="text" class="search">
+            <button class="searchbutton">Search</button>
+        </div>
+    </div> -->
+    <!-- <div class="welcome">
+        <span class="welcometext">Welcome To Smart Owls Library</span>
+    </div> -->
+    <div class="bar">
+        <h1 class="bookheading1">Best-Sellers:</h1>
+        <div class="container1">
+            <div class="books">
+                <img src="book1.jpg" alt="" class="bookcover">
+                <a href = "Asamanthinketh.html" class="booktitle">As a Man Thinketh</a>
+            </div>
+            <div class="books">
+                <img src="book2.jpg" alt="" class="bookcover">
+                <a href = "atomicshabits.html" class="booktitle">Atomic Habits</a>
+            </div>
+            <div class="books">
+                <img src="book3.jpg" alt="" class="bookcover">
+                <a href = "brainrules.html" class="booktitle">Brain Rules</a>
+            </div>
+            <div class="books">
+                <img src="book4.jpg" alt="" class="bookcover">
+                <a href = "fatforfuel.html" class="booktitle">Fat for Fuel</a>
+            </div>
+        </div>
+        <h1 class="bookheading2">New Releases:</h1>
+        <div class="container2">
+            <div class="books">
+                <img src="book5.jpg" alt="" class="bookcover">
+                <a href = "eatmovesleep.html" class="booktitle">Eat Move Sleep</a>
+            </div>
+            <div class="books">
+                <img src="book6.jpg" alt="" class="bookcover">
+                <a href = "howemotionsaremade.html" class="booktitle">How Emotions are made</a>
+            </div>
+            <div class="books">
+                <img src="book7.jpg" alt="" class="bookcover">
+                <a href = "stopworrying.html" class="booktitle">Stop Worrying and Start Living</a>
+            </div>
+            <div class="books">
+                <img src="book8.jpg" alt="" class="bookcover">
+                <a href = "healthy.html" class="booktitle">Healthy at 100</a>
+            </div>
+        </div>
+        <h1 class="bookheading3">Trending:</h1>
+        <div class="container3">
+            <div class="books">
+                <img src="book9.jpg" alt="" class="bookcover">
+                <a href = "fireandfury.html" class="booktitle">Fire and Fury</a>
+            </div>
+            <div class="books">
+                <img src="book10.jpg" alt="" class="bookcover">
+                <a href = "egoistheenemy.html" class="booktitle">Ego is the enemy</a>
+            </div>
+            <div class="books">
+                <img src="book11.jpg" alt="" class="bookcover">
+                <a href = "whatmattersmost.html" class="booktitle">What Matters Most</a>
+            </div>
+            <div class="books">
+                <img src="book12.jpg" alt="" class="bookcover">
+                <a href = "failfast.html" class="booktitle">Fail Fast, Fail Often</a>
+            </div>
+        </div>
+    <div class="about">
+    <h1 class="abouthead">About us</h1>
+    <p class="abouttext">Welcome to out library website! We are a community hub for knowledge and learning, dedicated to
+        connecting our patrons with the resources they need to explore new ideas, gain new skills, nad pursue thier
+        passions. At our library, we value inclusion, diversity and equity. We strive to create a welcoming and safe
+        space for all members of aur community, regardless of their background. Thank you for choosing us as your go-to
+        resourse website for learning, inspiration and connection. We look forward to serving you.</p>
+    </div>
+</body>
+
+</html>

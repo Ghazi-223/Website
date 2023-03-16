@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>How Emotions are made</title>
+</head>
+<style>
+    body {
+        background-image: url('library.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        /* overflow: auto; */
+    }
+
+    .logo {
+        /* border: 2px solid red; */
+        display: inline-block;
+        color: white;
+        /* padding-bottom: 10px; */
+    }
+
+    .mid {
+        /* border: 2px solid green; */
+        display: inline-block;
+        position: absolute;
+        right: 500px;
+        padding: 20px;
+    }
+
+    .nav {
+        float: left;
+        list-style: none;
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    div ul li {
+        /* background-color: aqua;
+        height: 40px;
+        width: 70px; */
+        padding: 5px;
+        position: relative;
+        left: 30px;
+    }
+
+    .logo:hover {
+        filter: brightness(200%);
+    }
+
+    div ul li a {
+        text-decoration: none;
+        color: gray;
+        /* background-color: aqua; */
+    }
+
+    div ul li a:hover {
+        /* text-decoration: none; */
+        text-decoration: underline;
+        color: white;
+    }
+
+    .right {
+        /* border: 2px solid yellow; */
+        position: absolute;
+        display: inline-block;
+        top: 30px;
+        right: 20px;
+    }
+
+    .sign {
+        margin: 10px;
+        /* margin: 2px 2px; */
+        padding: 8px;
+        background: none;
+        color: gray;
+        border: black;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+    }
+
+    .sign:hover {
+        text-decoration: underline;
+        color: white;
+        border-radius: 8px;
+    }
+
+    #text {
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* overflow: auto;
+        position: absolute; */
+    }
+
+    .box {
+        /* border: 2px solid red; */
+        margin-top: 150px;
+        display: flex;
+        /* border: 2px solid white; */
+    }
+
+    p {
+        color: white;
+        font-size: 50px;
+    }
+
+    .text {
+        margin-left: 130px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .search {
+        margin-left: 40px;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 480px;
+        background-color: black;
+        opacity: 0.8;
+        color: white;
+        font-size: 20px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 100px;
+        border-radius: 10px;
+        box-shadow: 8px 8px 10px rgb(0, 0, 0);
+    }
+
+    .search:hover {
+        border: 2px solid rgb(163, 163, 242);
+    }
+
+    .searchbutton {
+        background: none;
+        opacity: 0.8;
+        border: NONE;
+        height: 30px;
+        position: relative;
+        top: 2px;
+        right: 100px;
+        font-size: 25px;
+        color: white;
+        border-left: 2px solid white;
+    }
+
+    .background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+    }
+
+    .searchbutton:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .about {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        opacity: 0.5;
+        top: 230px;
+        background-color: rgb(61, 60, 60);
+        border-color: rgb(61, 60, 60);
+        text-align: center;
+    }
+
+    .abouthead {
+        padding: 20px;
+        opacity: 1;
+        color: white;
+    }
+
+    .abouttext {
+        opacity: 1;
+        font-size: 20px;
+        padding: 0px 30px;
+        padding-bottom: 10px;
+    }
+
+    .logoname {
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .bookcover {
+        margin-left: 8%;
+    }
+
+    .description {
+        margin-left: 3%;
+        padding-right: 2%;
+    }
+
+    .heading {
+        font-size: 50px;
+        color: white;
+    }
+
+    .authorname {
+        font-size: 20px;
+        position: relative;
+        bottom: 40px;
+        display: inline;
+        /* left: 350px; */
+    }
+
+    .synopsis {
+        font-size: 24px;
+        color: white;
+        /* border: 2px solid white; */
+    }
+
+    .but {
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* margin: auto; */
+    }
+
+    button {
+        font-size: 20px;
+        background: black;
+        border-radius: 10px;
+        border: black;
+        color: white;
+        height: 50px;
+        width: 200px;
+    }
+
+    button:hover{
+        /* text-decoration: underline; */
+        color: black;
+        border: white;
+        background: white;
+        cursor: pointer;
+    }
+
+    button:focus + .sum{
+        display: block;
+    }
+
+    .sum{
+        display: none;
+        padding: 50px 100px;
+        font-size: 20px;
+    }
+    .revis{
+        padding: 0px 100px;
+    }
+</style>
+
+<body>
+    <img src="library.jpg" alt="" class="background">
+    <div id="back"></div>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="" id="logoimage" width="200" height="100" style="filter: invert(90%);">
+            <!-- <span id="logoname">Smart Owl</span> -->
+        </div>
+        <div class="mid">
+            <ul id="navbar">
+                <li class="nav"><a href="home.html">Home</a></li>
+                <li class="nav" id="search"><a href="search.html">Search</a></li>
+                <li class="nav"><a href="Browse.html">Browse</a></li>
+                <li class="nav"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- <button class="sign">Sign Up</button>
+            <button class="sign">Sign In</button> -->
+            <a href="signup.html" class="sign">Sign Up</a>
+            <a href="signin.html" class="sign">Sign In</a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="bookcover">
+            <img src="book6.jpg" alt="As a Man Thinketh" height="380" width="220" style="border-radius: 10px;">
+        </div>
+        <div class="description">
+            <h2 class="heading">How emotions are made</h2>
+            <!-- <span class="authorname">James Allen</span> -->
+            <p class="authorname"> by Lisa Feldman</p>
+            <br>
+            <b class="synopsis">Synopsis:</b>
+            <p class="synopsis">How Emotions Are Made explores the often misconstrued world of human feelings and the cutting-edge science behind how they’re formed.</p>
+        </div>
+    </div>
+    <div class="but">
+        <button>Show summary</button>
+        <p class="sum">
+            In our society, we often think of emotions of something you can’t control, almost like a reflex. This classical view is the idea that emotions are more or less irrational reflexes leftover from our evolution. We even teach it in textbooks and see it all around us in the media. Further, there’s a notion that each emotion comes from a distinct part of the brain. This essentialist look on emotion also assumes that everyone experiences, expresses, and interprets emotions in the same way. 
+
+But think about it, do you always express anger in the same way? Of course not. The classical view doesn’t work because we can express every emotion in multiple ways. Sadness isn’t just one distinct feeling. Find a thesaurus and you’ll see the myriad of different variations, all of which have a slightly different feeling. This is because each emotional response is specific to the situation, rather than us experiencing the same few recurring emotions.
+
+Experiments in emotion show that single emotions don’t originate in a specific region of the brain. In the author’s own research, she looked at brain scans during various emotions. Barrett saw that the “emotion” region of the brain is active even during perceptions and thoughts that aren’t emotional. She found that though societies may have expressive patterns, there isn’t a universal response in the brain to each emotion. Yet, as a society, we still perpetuate the classical view. We waste money in trying to find ways to identify emotions.
+
+So if the classical view has it all wrong, what should we believe? The author advocates for the theory of constructed emotion. This is that we create emotions spontaneously and concurrently in more than one area of the brain. Furthermore, emotions are based on the individual. We form our feelings from a combination of unique sensory input and the brain’s best predictions.
+
+The theory is that the brain doesn’t just spontaneously create emotions per the situation. Rather, the source of emotions is in each person’s individual experiences. The brain makes predictions and anticipates sensory inputs such as vision or taste. Sensory inputs either affirm the mind’s predictions as correct or the brain learns and changes wrong predictions. 
+
+This is why we experience a myriad of anger responses. Sometimes we may shout, others we might stay quiet. Each response has its own neural pathway and bodily movements. The brain uses prior experience and sensory input to predict which reaction will be best for the specific situation. 
+
+The author compares this to Darwin’s theory of evolution, that each animal varies subtly depending on their environment. Similarly, our emotions are not innate or fixed but are constructed by our experience.
+
+Not only do people not experience emotions the same way, but culture also shapes our concept of emotions. In the Tahitian language, they don’t have any words to describe sadness. Rather, they use a word meaning something along the lines of “the fatigue that comes with the flu.”
+
+Our reality depends on the concepts we have to describe what’s around us, and these depend on our culture. So our idea of what emotions are is a convention of the culture we live in. This means that once we know the concept of an emotion, we can experience that emotion. 
+
+Smiling is a relatively recent concept. Interestingly, the Ancient Romans didn’t even have a word to describe it. The author believes it was not associated with being happy as it is now. Humans probably didn’t “invent” it until the Middle Ages. It’s likely there was some other gesture in Roman culture to indicate happiness, but we don’t know. Our concept of what emotions are is highly dependent on the culture we are a part of.</p>
+    </div>
+    <div class="revis">
+        <h1 class="heading">Review :</h1>
+        <p class="synopsis">As A Man Thinketh is a very short book, with a very short summary. At first I thought it’s best to just get the book and read it in one go, but come to think of it, I’d use this summary as a guideline and look into it to get a better grip on things, as the language in the book can be quite complicated, simply because it’s so old. I have since read the book and can recommend that too in full, though. It’s still a short read and worth reading through at least once in your life.</p>
+    </div>
+    <div class="about">
+        <h1 class="abouthead">About us</h1>
+        <p class="abouttext">How Emotions Are Made is a refreshing new take on the true source of our feelings. Although some of the concepts in the book were unfamiliar to me, I enjoyed the fascinating takeaways. I think we need more research on these ideas, but I would highly recommend this book!</p>
+    </div>
+</body>
+
+</html>

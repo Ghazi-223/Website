@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Fat for Fuel</title>
+</head>
+<style>
+    body {
+        background-image: url('library.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        /* overflow: auto; */
+    }
+
+    .logo {
+        /* border: 2px solid red; */
+        display: inline-block;
+        color: white;
+        /* padding-bottom: 10px; */
+    }
+
+    .mid {
+        /* border: 2px solid green; */
+        display: inline-block;
+        position: absolute;
+        right: 500px;
+        padding: 20px;
+    }
+
+    .nav {
+        float: left;
+        list-style: none;
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    div ul li {
+        /* background-color: aqua;
+        height: 40px;
+        width: 70px; */
+        padding: 5px;
+        position: relative;
+        left: 30px;
+    }
+
+    .logo:hover {
+        filter: brightness(200%);
+    }
+
+    div ul li a {
+        text-decoration: none;
+        color: gray;
+        /* background-color: aqua; */
+    }
+
+    div ul li a:hover {
+        /* text-decoration: none; */
+        text-decoration: underline;
+        color: white;
+    }
+
+    .right {
+        /* border: 2px solid yellow; */
+        position: absolute;
+        display: inline-block;
+        top: 30px;
+        right: 20px;
+    }
+
+    .sign {
+        margin: 10px;
+        /* margin: 2px 2px; */
+        padding: 8px;
+        background: none;
+        color: gray;
+        border: black;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+    }
+
+    .sign:hover {
+        text-decoration: underline;
+        color: white;
+        border-radius: 8px;
+    }
+
+    #text {
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* overflow: auto;
+        position: absolute; */
+    }
+
+    .box {
+        /* border: 2px solid red; */
+        margin-top: 150px;
+        display: flex;
+        /* border: 2px solid white; */
+    }
+
+    p {
+        color: white;
+        font-size: 50px;
+    }
+
+    .text {
+        margin-left: 130px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .search {
+        margin-left: 40px;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 480px;
+        background-color: black;
+        opacity: 0.8;
+        color: white;
+        font-size: 20px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 100px;
+        border-radius: 10px;
+        box-shadow: 8px 8px 10px rgb(0, 0, 0);
+    }
+
+    .search:hover {
+        border: 2px solid rgb(163, 163, 242);
+    }
+
+    .searchbutton {
+        background: none;
+        opacity: 0.8;
+        border: NONE;
+        height: 30px;
+        position: relative;
+        top: 2px;
+        right: 100px;
+        font-size: 25px;
+        color: white;
+        border-left: 2px solid white;
+    }
+
+    .background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+    }
+
+    .searchbutton:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .about {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        opacity: 0.5;
+        top: 230px;
+        background-color: rgb(61, 60, 60);
+        border-color: rgb(61, 60, 60);
+        text-align: center;
+    }
+
+    .abouthead {
+        padding: 20px;
+        opacity: 1;
+        color: white;
+    }
+
+    .abouttext {
+        opacity: 1;
+        font-size: 20px;
+        padding: 0px 30px;
+        padding-bottom: 10px;
+    }
+
+    .logoname {
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .bookcover {
+        margin-left: 8%;
+    }
+
+    .description {
+        margin-left: 3%;
+        padding-right: 2%;
+    }
+
+    .heading {
+        font-size: 50px;
+        color: white;
+    }
+
+    .authorname {
+        font-size: 20px;
+        position: relative;
+        bottom: 40px;
+        display: inline;
+        /* left: 350px; */
+    }
+
+    .synopsis {
+        font-size: 24px;
+        color: white;
+        /* border: 2px solid white; */
+    }
+
+    .but {
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* margin: auto; */
+    }
+
+    button {
+        font-size: 20px;
+        background: black;
+        border-radius: 10px;
+        border: black;
+        color: white;
+        height: 50px;
+        width: 200px;
+    }
+
+    button:hover{
+        /* text-decoration: underline; */
+        color: black;
+        border: white;
+        background: white;
+        cursor: pointer;
+    }
+
+    button:focus + .sum{
+        display: block;
+    }
+
+    .sum{
+        display: none;
+        padding: 50px 100px;
+        font-size: 20px;
+    }
+    .revis{
+        padding: 0px 100px;
+    }
+</style>
+
+<body>
+    <img src="library.jpg" alt="" class="background">
+    <div id="back"></div>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="" id="logoimage" width="200" height="100" style="filter: invert(90%);">
+            <!-- <span id="logoname">Smart Owl</span> -->
+        </div>
+        <div class="mid">
+            <ul id="navbar">
+                <li class="nav"><a href="home.html">Home</a></li>
+                <li class="nav" id="search"><a href="search.html">Search</a></li>
+                <li class="nav"><a href="Browse.html">Browse</a></li>
+                <li class="nav"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- <button class="sign">Sign Up</button>
+            <button class="sign">Sign In</button> -->
+            <a href="signup.html" class="sign">Sign Up</a>
+            <a href="signin.html" class="sign">Sign In</a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="bookcover">
+            <img src="book4.jpg" alt="As a Man Thinketh" height="380" width="220" style="border-radius: 10px;">
+        </div>
+        <div class="description">
+            <h2 class="heading">Fat for Fuel</h2>
+            <!-- <span class="authorname">James Allen</span> -->
+            <p class="authorname"> by Dr. Joseph Mercola</p>
+            <br>
+            <b class="synopsis">Synopsis:</b>
+            <p class="synopsis">Fat For Fuel explores the “Mitochondrial Metabolic Therapy” program, which offers a revolutionary approach to diets by promoting a high-fat, adequate-protein, and low-carb diet, all while highlighting the importance of fasting and the role of nutrition in fighting diseases.</p>
+        </div>
+    </div>
+    <div class="but">
+        <button>Show summary</button>
+        <p class="sum">
+            Mitochondria are “the powerhouse of the cell,” as you might remember from biology class. The human body hosts millions of billions (!) of cells. Therefore, mitochondria account for 10% of our body weight! When they break down, we get ill. That’s why it’s essential that we take good care of them. How? By adopting the right diet and lifestyle.
+
+The author swears by an adequate-protein, low-carb, high-fat diet that focuses on two pillars: eating fewer calories and getting the exact right amount of protein. So eat less in general, but make sure you get the right amount of protein.
+
+Intermittent fasting can help you reduce calories. It implies restricting your eating window to a certain time frame every day, then fasting for the rest of it, and keeping on repeating this cycle.
+
+But what should you eat in your non-fasting hours? The author suggests opting for a plant-based diet with a high fat intake from seeds, avocados, nuts, and other good sources. He also suggests introducing occasional animal proteins in your diet and focusing more on what feels good for your body. There is no right way or a one-size-fits-all diet for each and every one of us.
+
+According to the book, too much protein can activate our mTOR (Mechanistic Target of Rapamycin), which stands in the way of our body cleaning its own debris and toxins from cells.
+
+In other words, we don’t want to activate the mTOR, yet too much protein or carbs can do so. So, what’s the right amount? According to the book, it’s about 0.5 grams of protein for every kilogram of lean body mass. Your lean body mass is about 80% of the total. So, multiply your weight by 0.8 and that by 0.5, and you have your daily grams of protein!
+
+For example, if you’re 55 kilos, you’ll multiply 0.8 with that and get a value of 44. That’s your lean body mass! Now, your protein intake should be 0.5 for each lean body mass kg. So that would be 22 grams of protein for a 55 kg person with a body fat level of 14%.
+
+I know it sounds a bit complex. But once you start thinking about it, it gets easier and makes a lot of sense. Another crucial aspect is to focus on nutrients, rather than calories. Make sure to introduce a lot of fat in your diet. But have it come from good sources, like plants, seeds, and occasional animal products. Never from industrial fats, processed products, and trans-fats!
+
+You might’ve heard this before, but: Stop eating before bedtime! I know, everything just tastes better at night. Social gatherings usually happen after 7 PM, and movies are less entertaining without some snacks. However, are you willing to risk your health and overall well-being for it? I hope not! Therefore, the author suggests implementing fasting in your life asap. More specifically, he advocates for peak fasting, which means eating for 6-11 hours a day, and limiting eating to 13-18 hours. 
+
+Although difficult, this lifestyle change is definitely doable! Just think about it: you delay your breakfast by a few hours, then start eating for the day. Then stop 3-6 hours before your bedtime. It doesn’t sound that bad! Plus, by introducing the right amount of protein, the good sources of fat, and limiting your net carb intake in your diet, your body will have the right fuel and feel better than ever, leaving you less tempted to snack on unnecessary foods. 
+
+Fasting has enormous benefits, yet few people try it. The author suggests that eating fewer grains, gluten, and carbs overall can help you keep your hunger hormones in balance, all while helping your body to ditch storing unnecessary fat and produce insulin. Therefore, if you’re struggling with diabetes, or simply want to lose some weight or live better, this is the way to go! Also, burning fat instead of calories will leave you feeling more energetic and less bloated after meals.</p>
+    </div>
+    <div class="revis">
+        <h1 class="heading">Review :</h1>
+        <p class="synopsis">Fat For Fuel approaches one main idea: meeting our mitochondria, which is the power center of our health. By combining science, nutrition, medicine, molecular biology, and comprehensive research on complementary topics, the book manages to offer a hands-on guide to maintaining health at excellent levels, combating diseases through nutrition, and accessing remarkable energy levels by eating the right foods. This book addresses a series of essential topics that could change anyone’s life for the better right away if they’re looking to cure diseases, reach an optimum weight, improve their energy levels, or simply live better by eating better.</p>
+    </div>
+    <div class="about">
+        <h1 class="abouthead">About us</h1>
+        <p class="abouttext">Welcome to out library website! We are a community hub for knowledge and learning,
+            dedicated to connecting our patrons with the resources they need to explore new ideas, gain new skills, nad
+            pursue thier passions. At our library, we value inclusion, diversity and equity. We strive to create a
+            welcoming and safe space for all members of aur community, regardless of their background. Thank you for
+            choosing us as your go-to resourse website for learning, inspiration and connection. We look forward to
+            serving you.</p>
+    </div>
+</body>
+
+</html>

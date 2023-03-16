@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Fail Fast, Fail Often</title>
+</head>
+<style>
+    body {
+        background-image: url('library.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        /* overflow: auto; */
+    }
+
+    .logo {
+        /* border: 2px solid red; */
+        display: inline-block;
+        color: white;
+        /* padding-bottom: 10px; */
+    }
+
+    .mid {
+        /* border: 2px solid green; */
+        display: inline-block;
+        position: absolute;
+        right: 500px;
+        padding: 20px;
+    }
+
+    .nav {
+        float: left;
+        list-style: none;
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    div ul li {
+        /* background-color: aqua;
+        height: 40px;
+        width: 70px; */
+        padding: 5px;
+        position: relative;
+        left: 30px;
+    }
+
+    .logo:hover {
+        filter: brightness(200%);
+    }
+
+    div ul li a {
+        text-decoration: none;
+        color: gray;
+        /* background-color: aqua; */
+    }
+
+    div ul li a:hover {
+        /* text-decoration: none; */
+        text-decoration: underline;
+        color: white;
+    }
+
+    .right {
+        /* border: 2px solid yellow; */
+        position: absolute;
+        display: inline-block;
+        top: 30px;
+        right: 20px;
+    }
+
+    .sign {
+        margin: 10px;
+        /* margin: 2px 2px; */
+        padding: 8px;
+        background: none;
+        color: gray;
+        border: black;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+    }
+
+    .sign:hover {
+        text-decoration: underline;
+        color: white;
+        border-radius: 8px;
+    }
+
+    #text {
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* overflow: auto;
+        position: absolute; */
+    }
+
+    .box {
+        /* border: 2px solid red; */
+        margin-top: 150px;
+        display: flex;
+        /* border: 2px solid white; */
+    }
+
+    p {
+        color: white;
+        font-size: 50px;
+    }
+
+    .text {
+        margin-left: 130px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .search {
+        margin-left: 40px;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 480px;
+        background-color: black;
+        opacity: 0.8;
+        color: white;
+        font-size: 20px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 100px;
+        border-radius: 10px;
+        box-shadow: 8px 8px 10px rgb(0, 0, 0);
+    }
+
+    .search:hover {
+        border: 2px solid rgb(163, 163, 242);
+    }
+
+    .searchbutton {
+        background: none;
+        opacity: 0.8;
+        border: NONE;
+        height: 30px;
+        position: relative;
+        top: 2px;
+        right: 100px;
+        font-size: 25px;
+        color: white;
+        border-left: 2px solid white;
+    }
+
+    .background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+    }
+
+    .searchbutton:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .about {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        opacity: 0.5;
+        top: 230px;
+        background-color: rgb(61, 60, 60);
+        border-color: rgb(61, 60, 60);
+        text-align: center;
+    }
+
+    .abouthead {
+        padding: 20px;
+        opacity: 1;
+        color: white;
+    }
+
+    .abouttext {
+        opacity: 1;
+        font-size: 20px;
+        padding: 0px 30px;
+        padding-bottom: 10px;
+    }
+
+    .logoname {
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .bookcover {
+        margin-left: 8%;
+    }
+
+    .description {
+        margin-left: 3%;
+        padding-right: 2%;
+    }
+
+    .heading {
+        font-size: 50px;
+        color: white;
+    }
+
+    .authorname {
+        font-size: 20px;
+        position: relative;
+        bottom: 40px;
+        display: inline;
+        /* left: 350px; */
+    }
+
+    .synopsis {
+        font-size: 24px;
+        color: white;
+        /* border: 2px solid white; */
+    }
+
+    .but {
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* margin: auto; */
+    }
+
+    button {
+        font-size: 20px;
+        background: black;
+        border-radius: 10px;
+        border: black;
+        color: white;
+        height: 50px;
+        width: 200px;
+    }
+
+    button:hover{
+        /* text-decoration: underline; */
+        color: black;
+        border: white;
+        background: white;
+        cursor: pointer;
+    }
+
+    button:focus + .sum{
+        display: block;
+    }
+
+    .sum{
+        display: none;
+        padding: 50px 100px;
+        font-size: 20px;
+    }
+    .revis{
+        padding: 0px 100px;
+    }
+</style>
+
+<body>
+    <img src="library.jpg" alt="" class="background">
+    <div id="back"></div>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="" id="logoimage" width="200" height="100" style="filter: invert(90%);">
+            <!-- <span id="logoname">Smart Owl</span> -->
+        </div>
+        <div class="mid">
+            <ul id="navbar">
+                <li class="nav"><a href="home.html">Home</a></li>
+                <li class="nav" id="search"><a href="search.html">Search</a></li>
+                <li class="nav"><a href="Browse.html">Browse</a></li>
+                <li class="nav"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- <button class="sign">Sign Up</button>
+            <button class="sign">Sign In</button> -->
+            <a href="signup.html" class="sign">Sign Up</a>
+            <a href="signin.html" class="sign">Sign In</a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="bookcover">
+            <img src="book12.jpg" alt="As a Man Thinketh" height="380" width="220" style="border-radius: 10px;">
+        </div>
+        <div class="description">
+            <h2 class="heading">Fail Fast, Fail Often</h2>
+            <!-- <span class="authorname">James Allen</span> -->
+            <p class="authorname"> by Ryan Babineaux</p>
+            <br>
+            <b class="synopsis">Synopsis:</b>
+            <p class="synopsis">Fail Fast Fail Often outlines the importance of accepting failure as a natural part of our life, and how by embracing it instead of fearing it can improve the way we evolve, grow, learn and respond to new experiences and people.</p>
+        </div>
+    </div>
+    <div class="but">
+        <button>Show summary</button>
+        <p class="sum">
+            If you feel stuck in a routine that makes you unproductive and miserable but can’t find the inner strength and determination to break it, we have some news ━ you have an underlying fear of failure. Doesn’t sound good, right?
+
+Many people feel as if changing their lives requires immense effort and an actionable plan that takes a lot of time to come up with ━ wrong. Some people quit smoking after waking up one day and deciding not to buy another pack of cigarettes. It all comes from our minds and inner determination. 
+
+If you want something, go for it. It’s really that simple. Still, if you find it difficult to implement everything at once, try doing small things that bring positive results. Go on by reversing your mindset, from looking up to the future for prosperity and happiness, to finding them in the little things that surround you every day.
+
+Lastly, keep in mind that success is most often the result of a winning mentality and seizing opportunities, rather than rigorous planning. Still, you shouldn’t skip that phase completely, but keep your lines blurred when it comes to the rigidity of your planned actions and ride the wave as it comes.
+
+Lesson 2: Failing throughout your life can turn out to be one of the best things you can do.
+No one likes to lose, right? Whether we’re talking about insignificant things going on in your day, to more serious aspects such as missing a promotion or having your business become insolvent, failing can be very upsetting and it can seriously impact one’s spirit. 
+
+However, failure is one of the best things that can happen to you. Shocking, right? Well, it turns out that being engaged in a process of trial and error and learning from it can lead to significant improvements in your soft skills. Consequently, those skills will help you build a stronger foundation for your future endeavors.
+
+Every time you fail and analyze your strategies to improve them, you better yourself. Growth often feels like a drawback, giving you a hard time and a good deal of unpleasant feelings. However, once you get past this barrier, you’ll notice how the lessons and the skills you’ve learned are already helping you build a better future. 
+
+The lesson here is: Try. Fail. Learn from your mistakes. Don’t be afraid to fail, as it is a great source of wisdom. Only by learning from your failures can you grow and do better next time.
+
+Lesson 3: Set goals and divide them into smaller objectives to make them more achievable.
+Although failure is a natural part of the evolution process, that doesn’t mean that we should just fail as often and as unstructured as we can. Prevention is still necessary, and failing can only turn into a lesson if you discover how to do it productively by analyzing where the gaps in your plan are.
+
+Wait, a plan? Indeed, planning ahead is another important aspect that you should always keep in mind. Setting goals will not only make you more determined and ambitious as you’ll have something to look up to, but it will also give more structure to your life. So how are we supposed to plan ahead? 
+
+Well, start by setting a goal related to something you want to achieve. Your goals may be to lose weight, grow your income, or change your career. The important part is to be very specific when it comes to your objectives. Bind them to a deadline and stick to it. Then, divide them into smaller goals and steps.
+
+This part is essential. If you end up biting more than you can chew, your motivation and morale can drop significantly and make you stop trying at all. Setting the bar high becomes more manageable when you divide your goals into smaller objectives and achieve them one by one. This way, you’ll end up getting what you wished for.</p>
+    </div>
+    <div class="revis">
+        <h1 class="heading">Review :</h1>
+        <p class="synopsis">Not many books offer actionable advice and focus on direct guidance instead of comforting their readers. However, Fail Fast Fail Often manages to speak to its readers by being a wake-up call for all those who are stuck in a rut and are one step away from burnout. Reading this work will positively influence your mind and body to start the process of changing your life for the better. All done without having to worry about the fear of failure anymore.</p>
+    </div>
+    <div class="about">
+        <h1 class="abouthead">About us</h1>
+        <p class="abouttext">One thing I liked in particular as I was reading the blinks for How To Stop Worrying And Start Living is that Dale backed up every single one of his tactics with a specific example of someone who applied it to reduce their worry. That made them more actionable. I could’ve easily shared three more, so I highly recommend you check out the blinks to get the full pool of ideas. Simple, straightforward, and useful, thumbs up!</p>
+    </div>
+</body>
+
+</html>

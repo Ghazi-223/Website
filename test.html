@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Search Books</title>
+</head>
+<style>
+    body {
+        background-image: url('library.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        /* overflow: auto; */
+    }
+
+    .logo {
+        /* border: 2px solid red; */
+        display: inline-block;
+        color: white;
+        /* padding-bottom: 10px; */
+    }
+
+    .mid {
+        /* border: 2px solid green; */
+        display: inline-block;
+        position: absolute;
+        right: 500px;
+        padding: 20px;
+    }
+
+    .nav {
+        float: left;
+        list-style: none;
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    div ul li {
+        /* background-color: aqua;
+        height: 40px;
+        width: 70px; */
+        padding: 5px;
+        position: relative;
+        left: 30px;
+    }
+
+    .logo:hover {
+        filter: brightness(200%);
+    }
+
+    div ul li a {
+        text-decoration: none;
+        color: gray;
+        /* background-color: aqua; */
+    }
+
+    div ul li a:hover {
+        /* text-decoration: none; */
+        text-decoration: underline;
+        color: white;
+    }
+
+    .right {
+        /* border: 2px solid yellow; */
+        position: absolute;
+        display: inline-block;
+        top: 30px;
+        right: 20px;
+    }
+
+    .sign {
+        margin: 10px;
+        /* margin: 2px 2px; */
+        padding: 8px;
+        background: none;
+        color: gray;
+        border: black;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+    }
+
+    .sign:hover {
+        text-decoration: underline;
+        color: white;
+        border-radius: 8px;
+    }
+
+    #text {
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* overflow: auto;
+        position: absolute; */
+    }
+
+    .box {
+        /* border: 2px solid red; */
+        margin-top: 150px;
+        display: flex;
+        border: 2px solid white;
+    }
+
+    p {
+        color: white;
+        font-size: 50px;
+    }
+
+    .text {
+        margin-left: 130px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .search {
+        margin-left: 40px;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 480px;
+        background-color: black;
+        opacity: 0.8;
+        color: white;
+        font-size: 20px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 100px;
+        border-radius: 10px;
+        box-shadow: 8px 8px 10px rgb(0, 0, 0);
+    }
+
+    .search:hover {
+        border: 2px solid rgb(163, 163, 242);
+    }
+
+    .searchbutton {
+        background: none;
+        opacity: 0.8;
+        border: NONE;
+        height: 30px;
+        position: relative;
+        top: 2px;
+        right: 100px;
+        font-size: 25px;
+        color: white;
+        border-left: 2px solid white;
+    }
+
+    .background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+    }
+
+    .searchbutton:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .about {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        opacity: 0.5;
+        top: 230px;
+        background-color: rgb(61, 60, 60);
+        border-color: rgb(61, 60, 60);
+        text-align: center;
+    }
+
+    .abouthead {
+        padding: 20px;
+        opacity: 1;
+        color: white;
+    }
+
+    .abouttext {
+        opacity: 1;
+        font-size: 20px;
+        padding: 0px 30px;
+        padding-bottom: 10px;
+    }
+
+    .logoname {
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .bookcover {
+        margin-left: 8%;
+    }
+
+    .description {
+        margin-left: 3%;
+        padding-right: 2%;
+    }
+
+    .heading {
+        font-size: 50px;
+        color: white;
+    }
+
+    .authorname {
+        font-size: 20px;
+        position: relative;
+        bottom: 40px;
+        left: 350px;
+    }
+
+    .synopsis {
+        font-size: 24px;
+        color: white;
+        /* border: 2px solid white; */
+    }
+
+    .but {
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* margin: auto; */
+    }
+
+    button {
+        font-size: 20px;
+        background: black;
+        border-radius: 10px;
+        border: black;
+        color: white;
+        height: 50px;
+        width: 200px;
+    }
+
+    button:hover {
+        /* text-decoration: underline; */
+        color: black;
+        border: white;
+        background: white;
+        cursor: pointer;
+    }
+
+    button:focus+.sum {
+        display: inline-block;
+    }
+
+    .sum {
+        display: none;
+        padding: 50px 100px;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <img src="library.jpg" alt="" class="background">
+    <div id="back"></div>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="" id="logoimage" width="200" height="100" style="filter: invert(90%);">
+            <!-- <span id="logoname">Smart Owl</span> -->
+        </div>
+        <div class="mid">
+            <ul id="navbar">
+                <li class="nav"><a href="home.html">Home</a></li>
+                <li class="nav" id="search"><a href="search.html">Search</a></li>
+                <li class="nav"><a href="Browse.html">Browse</a></li>
+                <li class="nav"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- <button class="sign">Sign Up</button>
+            <button class="sign">Sign In</button> -->
+            <a href="signup.html" class="sign">Sign Up</a>
+            <a href="signin.html" class="sign">Sign In</a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="bookcover">
+            <img src="book1.jpg" alt="As a Man Thinketh" height="380" width="220">
+        </div>
+        <div class="description">
+            <h2 class="heading">As a Man Thinketh</h2>
+            <p class="authorname">James Allen</p>
+            <b class="synopsis">Synopsis:</b>
+            <p class="synopsis">As A Man Thinketh is an essay and self-help classic, which argues that the key to
+                mastering your life is harnessing the power of your thoughts and helps you cultivate the philosophy and
+                attitude of a positive, successful person.</p>
+        </div>
+    </div>
+    <!-- <div class="but">
+        <button>Show summary</button>
+    </div>
+    <div>
+        <p class="sum">
+            The very first argument Allen lays out is that man is the sum of his thoughts. Just like tiny seeds turn
+            into big plants, a single thought often turns into a major decision, which makes your thoughts the roots of
+            your actions.
+
+            Over time, these actions shape into patterns, which will eventually make up our character. This is why most
+            pessimistic people tend to give up more easily on the things they care about, because your attitude and your
+            actions are directly linked to one another. If you don’t start out with confidence and expect very little of
+            yourself, that’s exactly what you’ll deliver.
+
+            But if your thoughts shape your actions, then by changing your thoughts, you can change your actions and
+            subsequently, your character too!
+
+            The time to start weeding out bad thoughts is right now. Today is the day to stop accepting negative
+            thoughts as normal and fight back. Take control of your mind, and you’ll take control of your life.
+
+            The reason your thoughts and actions are so deeply connected is because they live in a constant
+            cause-and-effect relationship with the outside world.
+
+            What does that mean? You might see your life as mostly determined by external factors. The weather, the
+            economy, politics, your co-workers, your boss, whether you have good luck or bad luck, your life depends on
+            so many things you can’t influence. But it’s not as black and white as that. Playing the victim is easy. You
+            can just push off responsibility and blame the world for everything.
+
+            In reality, your thoughts, your actions, your character, they all take at least as much influence on the
+            world, as the world does on you. The thoughts and attitudes you have are what lead you into the situations
+            of your life, some of which you then end up assigning to good or bad luck, when it’s really yourself that
+            got you there.
+
+            Therefore, you can’t describe a person’s character just by looking at the environment she lives in, or
+            predict the circumstances she’ll end up in, because of the way she is. There are many admirable and probably
+            genuinely good people in jail, while some greedy bastards live happily off other peoples’ misery.
+
+            A crucial aspect almost no one looks at when examining thoughts is your health. When we talk about the power
+            of positive thinking, we usually speak of affirmations, goals, priorities, etc. But not about health.
+
+            Yet, what you think massively impacts your heart rate, sleep, chronic pains like migraines and your skin.
+            Yes, you can think yourself to wrinkly skin.
+
+            Do you know that saying “be careful what you wish for?” This book extends it to “be careful what you think
+            about.” On the other hand, thinking very positively and dwelling on energizing thoughts can keep you young.
+            So take every chance you get to weed out negative thoughts.
+
+            Pretend your mind is a garden, and everything that doesn’t help it grow has to go. You’ll thank yourself for
+            years to come.</p>
+    </div> -->
+    <div>
+        <h1 class="heading">Review</h1>
+    </div>
+    <div class="about">
+        <h1 class="abouthead">About us</h1>
+        <p class="abouttext">Welcome to out library website! We are a community hub for knowledge and learning,
+            dedicated to connecting our patrons with the resources they need to explore new ideas, gain new skills, nad
+            pursue thier passions. At our library, we value inclusion, diversity and equity. We strive to create a
+            welcoming and safe space for all members of aur community, regardless of their background. Thank you for
+            choosing us as your go-to resourse website for learning, inspiration and connection. We look forward to
+            serving you.</p>
+    </div>
+</body>
+
+</html>

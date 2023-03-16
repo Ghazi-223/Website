@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Atomic Habits</title>
+</head>
+<style>
+    body {
+        background-image: url('library.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        /* overflow: auto; */
+    }
+
+    .logo {
+        /* border: 2px solid red; */
+        display: inline-block;
+        color: white;
+        /* padding-bottom: 10px; */
+    }
+
+    .mid {
+        /* border: 2px solid green; */
+        display: inline-block;
+        position: absolute;
+        right: 500px;
+        padding: 20px;
+    }
+
+    .nav {
+        float: left;
+        list-style: none;
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    div ul li {
+        /* background-color: aqua;
+        height: 40px;
+        width: 70px; */
+        padding: 5px;
+        position: relative;
+        left: 30px;
+    }
+
+    .logo:hover {
+        filter: brightness(200%);
+    }
+
+    div ul li a {
+        text-decoration: none;
+        color: gray;
+        /* background-color: aqua; */
+    }
+
+    div ul li a:hover {
+        /* text-decoration: none; */
+        text-decoration: underline;
+        color: white;
+    }
+
+    .right {
+        /* border: 2px solid yellow; */
+        position: absolute;
+        display: inline-block;
+        top: 30px;
+        right: 20px;
+    }
+
+    .sign {
+        margin: 10px;
+        /* margin: 2px 2px; */
+        padding: 8px;
+        background: none;
+        color: gray;
+        border: black;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+    }
+
+    .sign:hover {
+        text-decoration: underline;
+        color: white;
+        border-radius: 8px;
+    }
+
+    #text {
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* overflow: auto;
+        position: absolute; */
+    }
+
+    .box {
+        /* border: 2px solid red; */
+        margin-top: 150px;
+        display: flex;
+        /* border: 2px solid white; */
+    }
+
+    p {
+        color: white;
+        font-size: 50px;
+    }
+
+    .text {
+        margin-left: 130px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .search {
+        margin-left: 40px;
+        margin-bottom: 30px;
+        height: 30px;
+        width: 480px;
+        background-color: black;
+        opacity: 0.8;
+        color: white;
+        font-size: 20px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 100px;
+        border-radius: 10px;
+        box-shadow: 8px 8px 10px rgb(0, 0, 0);
+    }
+
+    .search:hover {
+        border: 2px solid rgb(163, 163, 242);
+    }
+
+    .searchbutton {
+        background: none;
+        opacity: 0.8;
+        border: NONE;
+        height: 30px;
+        position: relative;
+        top: 2px;
+        right: 100px;
+        font-size: 25px;
+        color: white;
+        border-left: 2px solid white;
+    }
+
+    .background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+    }
+
+    .searchbutton:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .about {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        opacity: 0.5;
+        top: 230px;
+        background-color: rgb(61, 60, 60);
+        border-color: rgb(61, 60, 60);
+        text-align: center;
+    }
+
+    .abouthead {
+        padding: 20px;
+        opacity: 1;
+        color: white;
+    }
+
+    .abouttext {
+        opacity: 1;
+        font-size: 20px;
+        padding: 0px 30px;
+        padding-bottom: 10px;
+    }
+
+    .logoname {
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .bookcover {
+        margin-left: 8%;
+    }
+
+    .description {
+        margin-left: 3%;
+        padding-right: 2%;
+    }
+
+    .heading {
+        font-size: 50px;
+        color: white;
+    }
+
+    .authorname {
+        font-size: 20px;
+        position: relative;
+        bottom: 40px;
+        display: inline;
+        /* left: 350px; */
+    }
+
+    .synopsis {
+        font-size: 24px;
+        color: white;
+        /* border: 2px solid white; */
+    }
+
+    .but {
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* margin: auto; */
+    }
+
+    button {
+        font-size: 20px;
+        background: black;
+        border-radius: 10px;
+        border: black;
+        color: white;
+        height: 50px;
+        width: 200px;
+    }
+
+    button:hover{
+        /* text-decoration: underline; */
+        color: black;
+        border: white;
+        background: white;
+        cursor: pointer;
+    }
+
+    button:focus + .sum{
+        display: block;
+    }
+
+    .sum{
+        display: none;
+        padding: 50px 100px;
+        font-size: 20px;
+    }
+    .revis{
+        padding: 0px 100px;
+    }
+</style>
+
+<body>
+    <img src="library.jpg" alt="" class="background">
+    <div id="back"></div>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="" id="logoimage" width="200" height="100" style="filter: invert(90%);">
+            <!-- <span id="logoname">Smart Owl</span> -->
+        </div>
+        <div class="mid">
+            <ul id="navbar">
+                <li class="nav"><a href="home.html">Home</a></li>
+                <li class="nav" id="search"><a href="search.html">Search</a></li>
+                <li class="nav"><a href="Browse.html">Browse</a></li>
+                <li class="nav"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- <button class="sign">Sign Up</button>
+            <button class="sign">Sign In</button> -->
+            <a href="signup.html" class="sign">Sign Up</a>
+            <a href="signin.html" class="sign">Sign In</a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="bookcover">
+            <img src="book2.jpg" alt="As a Man Thinketh" height="380" width="220" style="border-radius: 10px;">
+        </div>
+        <div class="description">
+            <h2 class="heading">Atomic Habits</h2>
+            <!-- <span class="authorname">James Allen</span> -->
+            <p class="authorname"> by James Clear</p>
+            <br>
+            <b class="synopsis">Synopsis:</b>
+            <p class="synopsis">Atomic Habits is the definitive guide to breaking bad behaviors and adopting good ones in four steps, showing you how small, incremental, everyday routines compound into massive, positive change over time.</p>
+        </div>
+    </div>
+    <div class="but">
+        <button>Show summary</button>
+        <p class="sum">
+In 1776, Adam Smith laid the foundation of modern economics in his magnum opus, The Wealth of Nations. One of his most famous observations is that, in a free market system, all workers naturally maximize their own society’s welfare, even if merely acting in their own best interest:
+
+“…he is in this, as in many other cases, led by an invisible hand to promote an end which was no part of his intention.”
+
+When it comes to habits, James suggests that environment is the invisible hand that shapes human behavior. That’s why a prompt is always the first step in performing any habit. It may not always be external, but, most of the time, it will be. Then, three more stages follow to complete the four-step pattern:
+
+Cue. A piece of information that suggests there’s a reward to be found, like the smell of a cookie or a dark room waiting to light up.
+Craving. The motivation to change something to get the reward, like tasting the delicious cookie or being able to see.
+Response. Whatever thought or action you need to take to get to the reward.
+Reward. The satisfying feeling you get from the change, along with the lesson whether to do it again or not.
+There are several popular methodologies that try to predict how and why we do what we do, such as Charles Duhigg’s habit loop, Gretchen Rubins four tendencies, or BJ Fogg’s Tiny Habits behavior model. James offers a more refined version of what Duhigg described in The Power of Habit and while all of these approaches are different, none of them are mutually exclusive.
+
+From the four-step pattern he suggests, James then derives four laws of behavior change, which correspond to one part of the loop each. Here they are, along with some ideas for how you can use them to facilitate good behaviors and make bad ones harder:
+
+Make it obvious. Don’t hide your fruits in your fridge, put them on display front and center.
+Make it attractive. Start with the fruit you like the most, so you’ll actually want to eat one when you see it.
+Make it easy. Don’t create needless friction by focusing on fruits that are hard to peel. Bananas and apples are super easy to eat, for example.
+Make it satisfying. If you like the fruit you picked, you’ll love eating it and feel healthier as a result!
+You can apply these to all kinds of good habits, like running, working on a side project, spending more time with family, and so on. Conversely, do the opposite for bad habits. Make them invisible, unattractive, difficult, and unsatisfying. For example, you could hide your cigarettes, add financial penalties, get rid of all lighters, and only allow yourself to smoke outside in the cold.
+
+With a framework like this, making and breaking habits becomes fun. You’ll likely want to tackle multiple things sooner rather than later, but it’s important to not take on too much at once. An easy way of keeping yourself accountable without becoming overwhelmed is to track your habits with a habit tracker.
+
+The idea is simple: You keep a record of all the behaviors you want to establish or abandon and, at the end of each day, you mark which ones you succeeded with. This record can be a single piece of paper, a journal, a calendar, or a digital tool, like an app.
+
+This strategy is based on what’s sometimes called the Seinfeld productivity hack. Comedian Jerry Seinfeld apparently marked his calendar with a big ‘X’ every day he came up with a joke. Soon, his goal was to not break the chain. It’s a simple, but effective strategy to help you build good habits.
+
+And since habits are the compound interest of self-improvement, that’s a process we should all start today.</p>
+    </div>
+    <div class="revis">
+        <h1 class="heading">Review :</h1>
+        <p class="synopsis">When it comes to changing our behavior, we all need to find out what works for us. That said, there are several scientifically proven strategies we should all try first. Atomic Habits is a complete, fun, engaging, and simple to understand compendium of those strategies. I highly recommend you make it your first stop when wanting to learn about the science of habits.</p>
+    </div>
+    <div class="about">
+        <h1 class="abouthead">About us</h1>
+        <p class="abouttext">Welcome to out library website! We are a community hub for knowledge and learning,
+            dedicated to connecting our patrons with the resources they need to explore new ideas, gain new skills, nad
+            pursue thier passions. At our library, we value inclusion, diversity and equity. We strive to create a
+            welcoming and safe space for all members of aur community, regardless of their background. Thank you for
+            choosing us as your go-to resourse website for learning, inspiration and connection. We look forward to
+            serving you.</p>
+    </div>
+</body>
+
+</html>
