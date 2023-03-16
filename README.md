@@ -1,1 +1,1 @@
-# Website
+It is the first website i have ever made as a project. I added new features as a went along with the tutorial i was watching. So the features at the start will be bad while i improved a bit as i reached the end of the project. It contains many files linked together and the starting file should be the home.html. I hope to improve even more in the future and learn and impliment new concepts.
